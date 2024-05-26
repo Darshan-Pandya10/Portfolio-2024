@@ -1,11 +1,12 @@
 import './App.css'
+import Header from './Components/Header'
 
 function App() {
 
   return (
-    <>
-     <h1>portfolio 2024</h1>
-    </>
+    <main className='app h-screen border-2 border-solid border-black'>
+        <Header/>
+    </main>
   )
 }
 

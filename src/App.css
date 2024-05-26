@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary-color : #000000;
+    --secondary-color : #ffffff;
+    --hightlight-color : #6849f3;
+}
+
+.app{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.navbar a:hover {
+    cursor: pointer;
+    color: rgb(79, 81, 86);
+}
