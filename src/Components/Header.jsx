@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { FaCode } from "react-icons/fa6";
-// border-2 border-solid border-white
 
 const Header = () => {
 

@@ -19,4 +19,26 @@
     cursor: pointer;
     color: rgb(79, 81, 86);
 }
+
+/* Loader */
+
+.loader {
+    margin: 6rem auto;
+    border: 0.6rem solid rgb(218, 218, 218);
+    border-radius: 50%;
+    border-top: 0.6rem solid #6849f3;
+    width: 5rem;
+    height: 5rem;
+    animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
  
