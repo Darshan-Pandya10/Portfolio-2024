@@ -14,7 +14,7 @@ const Projects = () => {
 
 
   return (
-    <section className='projects flex items-center justify-center flex-wrap p-8 md:m-12 '>
+    <section id='projects' className='projects flex items-center justify-center flex-wrap p-8 md:m-12'>
       {projects.map((project) => {
         const id = uuidv4()
         return <ProjectCard project={project} key={id}/>

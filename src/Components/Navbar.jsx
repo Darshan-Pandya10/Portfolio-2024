@@ -29,10 +29,10 @@ const Navbar = () => {
           w-[90vw] mx-auto min-h-screen sm:flex sm:flex-row sm:justify-end sm:items-end  sm:min-h-fit sm:ml-4 font-semibold text-[1rem]`}>
 
 
-          <a onClick={closeNavbar} className='text-2xl tracking-widest sm:tracking-normal sm:text-base mb-1 sm:mr-3 sm:mb-0' to='/'>About</a>
+          {/* <a onClick={closeNavbar} className='text-2xl tracking-widest sm:tracking-normal sm:text-base mb-1 sm:mr-3 sm:mb-0' to='/'>About</a> */}
 
-          <a onClick={closeNavbar} className='text-2xl tracking-widest sm:tracking-normal sm:text-base  mb-1 sm:mr-3 sm:mb-0' to='about'>Project</a>
-          <a onClick={closeNavbar} className='text-2xl tracking-widest sm:tracking-normal sm:text-base  mb-1 sm:mr-3 sm:mb-0' to='about'>Contact</a>
+          <a href='#projects' onClick={closeNavbar} className='text-2xl tracking-widest sm:tracking-normal sm:text-base  mb-1 sm:mr-3 sm:mb-0' to='about'>Projects</a>
+          <a href='#contact' onClick={closeNavbar} className='text-2xl tracking-widest sm:tracking-normal sm:text-base  mb-1 sm:mr-3 sm:mb-0' to='about'>Contact</a>
         </nav>
     </div>
   )

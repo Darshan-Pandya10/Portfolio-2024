@@ -1,10 +1,21 @@
 import React from 'react'
+import { FaCode } from "react-icons/fa6";
+import { GrLinkedin } from "react-icons/gr";
+import { FaGithub } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer Component.</h1>
-    </div>
+    <section className='footer bg-[#222831] flex items-center justify-between p-6'>
+       <main className="logo">
+        <FaCode size={30} className='cursor-pointer' />
+      </main>
+      <main className="socials inline-block">
+          <a href='www.linkedin.com/in/darshanpandya811' className='inline-block m-2 text-white'><GrLinkedin size={26}/></a>
+          <a href="https://github.com/Darshan-Pandya10" className='inline-block m-2 text-white'><FaGithub size={26}/></a>
+
+      </main>
+    </section>
   )
 }
 

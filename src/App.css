@@ -10,6 +10,11 @@
     --hightlight-color : #6849f3;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 .app{
     background-color: var(--primary-color);
     color: var(--secondary-color);
