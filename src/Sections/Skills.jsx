@@ -1,6 +1,6 @@
 import React from 'react'
-import skills from './SkillData'
-import SkillCard from './SkillCard'
+import skills from '../Data/SkillData'
+import SkillCard from '../Components/SkillCard'
 import { v4 as uuidv4 } from 'uuid';
 
 

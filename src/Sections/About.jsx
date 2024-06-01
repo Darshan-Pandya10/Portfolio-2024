@@ -18,7 +18,7 @@ const About = () => {
         }}
         />
         </div>
-      <p className='text-base md:w-[45rem] my-4 tracking-wide leading-7 text-center'>Dedicated to refining skills and delivering impactful web
+      <p className='text-base md:w-[45rem] my-4 tracking-wider leading-7 text-center'>Dedicated to refining skills and delivering impactful web
       experiences. Proficient in <span className='text-[#6849f3] font-bold'>JavaScript</span>  and <span className='text-[#6849f3] font-bold'>React</span> , with a commitment to continuous learning and staying
       abreast of industry trends.</p>
       <a href="#experience" className='btn mt-8 tracking-widest font-semibold px-8'>Explore</a>

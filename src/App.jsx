@@ -1,11 +1,11 @@
 import './App.css'
-import About from './Components/About'
-import Contact from './Components/Contact'
-import Experience from './Components/Experience'
+import About from './Sections/About'
+import Contact from './Sections/Contact'
+import Experience from './Sections/Experience'
 import Footer from './Components/Footer'
 import Header from './Components/Header'
-import Projects from './Components/Projects'
-import Skills from './Components/Skills'
+import Projects from './Sections/Projects'
+import Skills from './Sections/Skills'
 import { IoIosArrowUp } from "react-icons/io";
 import { useState, useEffect } from 'react';
 
@@ -39,7 +39,7 @@ function App() {
 
       {/* Conditional rendering of scroll-to-top button */}
       {showScrollToTop && (
-        <a href='#header' className='fixed bottom-24 right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'>
+        <a href='#header' className='fixed bottom-28 right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'>
           <IoIosArrowUp size={26} />
         </a>
       )}

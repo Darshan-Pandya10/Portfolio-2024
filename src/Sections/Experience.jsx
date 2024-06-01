@@ -1,6 +1,6 @@
 import React from 'react'
-import ExperienceData from './ExperienceData'
-import ExperienceCard from './ExperienceCard'
+import ExperienceData from '../Data/ExperienceData'
+import ExperienceCard from '../Components/ExperienceCard'
 import { v4 as uuidv4 } from 'uuid';
 
 const Experience = () => {

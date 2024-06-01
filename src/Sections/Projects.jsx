@@ -1,7 +1,7 @@
 import React from 'react'
-import {useFetchData} from './FetchData'
+import {useFetchData} from '../Data//FetchData'
 import { v4 as uuidv4 } from 'uuid';
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../Components/ProjectCard';
 
 const Projects = () => {
     const {loading , projects} = useFetchData()
