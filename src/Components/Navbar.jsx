@@ -22,9 +22,11 @@ const Navbar = () => {
   return (
     <div className='navbar'>
      <div className='sm:hidden'> 
-      <button onClick={handleNavbar} className='absolute top-2 right-4'> {isNavbarVisible ? <RxCross1 className='hover:text-[#6849f3]' size={26} /> : <RxHamburgerMenu className='hover:text-[#6849f3]'  size={26} />}</button>
+      <button onClick={handleNavbar} className='absolute top-4 right-4'> 
+      {isNavbarVisible ? <RxCross1 className='hover:text-[#6849f3]' size={26} /> : <RxHamburgerMenu className='hover:text-[#6849f3]'  size={26} />}
+      </button>
       </div>
-        <nav className={`mt-3 sm:mt-0 ${
+        <nav className={`mt-3 transition-all sm:mt-0 ${
           isNavbarVisible ? '' : 'hidden'} flex flex-col items-left justify-center justify-self-center place-items-center
           w-[90vw] mx-auto min-h-screen sm:flex sm:flex-row sm:justify-end sm:items-end  sm:min-h-fit sm:ml-4 font-semibold text-[1rem]`}>
 

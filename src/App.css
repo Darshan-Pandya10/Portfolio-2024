@@ -20,6 +20,7 @@ html {
     color: var(--secondary-color);
 }
 
+
 .btn {
     --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
     --border-width: 0.125em;
@@ -137,38 +138,6 @@ html {
     cursor: pointer;
     color: rgb(79, 81, 86);
 }
-
-.tilt-shape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.tilt-shape svg {
-    position: relative;
-    display: block;
-    width: calc(136% + 1.3px);
-    height: 115px;
-}
-
-.tilt-shape .shape-fill {
-    fill: #000000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Loader */
 

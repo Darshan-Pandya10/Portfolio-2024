@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <main className='app relative min-h-screen border-2 border-solid border-black'>
+    <main className='app transition-all relative min-h-screen border-2 border-solid border-black'>
       <Header />
       <About />
       <Skills />
