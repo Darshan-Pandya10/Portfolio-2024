@@ -8,6 +8,10 @@ import Projects from './Sections/Projects'
 import Skills from './Sections/Skills'
 import { IoIosArrowUp } from "react-icons/io";
 import { useState, useEffect } from 'react';
+import { Slide } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+
+
 
 function App() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -29,6 +33,19 @@ function App() {
 
   return (
     <main className='app transition-all relative min-h-screen border-2 border-solid border-black'>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition:Slide
+      />
       <Header />
       <About />
       <Skills />
