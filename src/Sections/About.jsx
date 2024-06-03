@@ -1,6 +1,5 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import HeroImage from '../assets/Images/HeroImage.jpg'
 const About = () => {
   return (
     <section 
@@ -28,13 +27,3 @@ const About = () => {
 };
 
 export default About;
-
-
-// style={{
-//         backgroundImage: `url(${HeroImage})`,
-//         backgroundPosition: 'center',
-//         backgroundSize: 'cover',
-//         backgroundRepeat: 'no-repeat',
-//         textAlign: 'center',
-//         color: '#000000', // Text color
-//       }}

@@ -56,7 +56,7 @@ function App() {
 
       {/* Conditional rendering of scroll-to-top button */}
       {showScrollToTop && (
-        <a href='#header' className='fixed bottom-28 right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'>
+        <a href='#header' className='fixed bottom-28 z-50 right-1 md:right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'>
           <IoIosArrowUp size={26} />
         </a>
       )}

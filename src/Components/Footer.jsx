@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <section className='footer bg-[#222831] flex items-center justify-between p-6'>
+    <section className='footer flex items-center justify-between px-6 py-4'>
        <main className="logo">
         <FaCode size={30} className='cursor-pointer' />
       </main>

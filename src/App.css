@@ -134,9 +134,14 @@ html {
 }
 
 
+
 .navbar a:hover {
     cursor: pointer;
     color: rgb(79, 81, 86);
+}
+
+.title{
+    text-shadow: 2px 2px #6849f3;
 }
 
 /* Loader */
