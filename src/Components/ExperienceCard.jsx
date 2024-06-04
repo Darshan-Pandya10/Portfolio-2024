@@ -1,9 +1,9 @@
 import React from 'react'
 import { FiGithub } from "react-icons/fi";
-// border-2 border-white border-solid
+
 const ExperienceCard = ({experience}) => {
 
-    const {ProjectName , Duration , Description , Github } = experience;
+  const {ProjectName , Duration , Description , Github } = experience;
 
   return (
     <div className="my-8 experience-card text-gray-300 hover:text-white hover:scale-105 transition-all duration-200 cursor-pointer bg-[#101010] relative m-4  md:m-12 p-8 md:w-[35rem] rounded-lg">

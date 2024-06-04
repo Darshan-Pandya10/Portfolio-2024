@@ -68,7 +68,7 @@ const Contact = () => {
     <>
       <h1 className='title text-center mt-24 tracking-widest font-semibold uppercase text-2xl text-white'>#Contact</h1>
     <section id='contact' className='contact m-6 md:m-12 md:mb-28 mt-8 mb-28'>
-      <div className="max-w-md mt-20 mx-auto relative overflow-hidden z-10 bg-gray-800 p-8 rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-[#525CEB] before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-[#6849f3] after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12">
+      <div className="max-w-md cursor-pointer mt-20 mx-auto relative overflow-hidden z-10 bg-gray-800 p-8 rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-[#525CEB] before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-[#6849f3] after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12">
         <h2 className="text-2xl font-bold text-white mb-6 tracking-wider">Get In Touch</h2>
 
         <form ref={form} onSubmit={sendEmail} method="post" action="#">
@@ -110,7 +110,7 @@ const Contact = () => {
 
           <div className="flex justify-end">
             <button
-              className="bg-gradient-to-r from-[#525CEB] to-[#6849f3] text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
+              className="bg-gradient-to-r from-[#525CEB] to-[#6849f3] tracking-widest text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
               type="submit"
             >
               Send
