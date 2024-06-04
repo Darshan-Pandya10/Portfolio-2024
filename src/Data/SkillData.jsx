@@ -1,4 +1,3 @@
-// Array of objects with SVG icon URLs and skill names
 const skills = [
   {
     skillName: 'HTML',

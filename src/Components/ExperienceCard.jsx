@@ -10,11 +10,8 @@ const ExperienceCard = ({experience}) => {
         <h1 className="text-white text-2xl font-bold mb-2 tracking-wider">{ProjectName}</h1>
         <h2 className="text-gray-300 text-base font-semibold mb-4">{Duration}</h2>
         <p className="text-gray-400 leading-7">{Description}</p>
-        <a href={Github} className='absolute top-4 right-4 hover:text-[#6849f3]'><FiGithub size={30}/></a>
+        <a target='_blank' href={Github} className='absolute top-4 right-4 hover:text-[#6849f3]'><FiGithub size={30}/></a>
     </div>
-
-
-    
   )
 }
 

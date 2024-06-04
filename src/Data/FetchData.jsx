@@ -24,7 +24,7 @@ export const useFetchData = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError(error.message); // or handle the error as you see fit
+      setError(error.message);
       console.error("Error fetching projects:", error);
     }
   };
