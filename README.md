@@ -29,4 +29,4 @@ I am a React.js developer based in India, enthusiastic about crafting web applic
 
 ## Deployment
 
-This portfolio is deployed and hosted on Netlify. You can visit it live [here](#https://portfolio-darshanpandya.netlify.app/)
+This portfolio is deployed and hosted on Netlify. You can visit it live [here](https://portfolio-darshanpandya.netlify.app/)
