@@ -55,7 +55,7 @@ function App() {
       <Footer />
 
       {showScrollToTop && (
-        <a href='#header' className='fixed bottom-28 z-30 right-1 md:right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'>
+        <a href='#' className='fixed bottom-28 z-49 right-1 md:right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'>
           <IoIosArrowUp size={26} />
         </a>
       )}
