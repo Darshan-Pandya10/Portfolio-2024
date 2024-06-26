@@ -11,7 +11,7 @@ const Footer = () => {
         <FaCode size={30} className='cursor-pointer' />
       </main>
       <main className="socials inline-block">
-          <a href='https://www.linkedin.com/in/darshanpandya811' target='_blank' className='bg-[#151515] hover:scale-110 duration-50 hover:bg-[#000000] p-3 rounded-full inline-block m-2 text-white '><GrLinkedinOption size={28}/></a>
+          <a href='https://www.linkedin.com/in/darshanpandya811/' target='_blank' className='bg-[#151515] hover:scale-110 duration-50 hover:bg-[#000000] p-3 rounded-full inline-block m-2 text-white '><GrLinkedinOption size={28}/></a>
           <a href="https://github.com/Darshan-Pandya10" target='_blank' className='bg-[#151515] hover:scale-110 duration-50  hover:bg-[#000000]  p-3 rounded-full inline-block m-2 text-white '><FaGithub size={28}/></a>
       </main>
     </section>
