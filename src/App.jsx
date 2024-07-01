@@ -1,17 +1,15 @@
-import './App.css'
-import About from './Sections/About'
-import Contact from './Sections/Contact'
-import Experience from './Sections/Experience'
-import Footer from './Components/Footer'
-import Header from './Components/Header'
-import Projects from './Sections/Projects'
-import Skills from './Sections/Skills'
+import './App.css';
+import About from './Sections/About';
+import Contact from './Sections/Contact';
+import Experience from './Sections/Experience';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import Projects from './Sections/Projects';
+import Skills from './Sections/Skills';
 import { IoIosArrowUp } from "react-icons/io";
 import { useState, useEffect } from 'react';
 import { Slide } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
-
-
 
 function App() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -19,9 +17,9 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const twoViewportHeight = window.innerHeight;
+      const ViewportHeight = window.innerHeight;
 
-      setShowScrollToTop(scrollPosition > twoViewportHeight);
+      setShowScrollToTop(scrollPosition > ViewportHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -30,6 +28,13 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <main className='app transition-all relative min-h-screen border-2 border-solid border-black'>
@@ -55,12 +60,15 @@ function App() {
       <Footer />
 
       {showScrollToTop && (
-        <a href='#' className='fixed bottom-28 z-49 right-1 md:right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'>
+        <button
+          onClick={scrollToTop}
+          className='fixed bottom-28 z-49 right-1 md:right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'
+        >
           <IoIosArrowUp size={26} />
-        </a>
+        </button>
       )}
     </main>
-  )
+  );
 }
 
 export default App;
