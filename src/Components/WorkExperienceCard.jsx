@@ -5,7 +5,7 @@ const WorkExperienceCard = ({ job }) => {
   const { company, role, location, duration, highlights, tech } = job;
 
   return (
-    <article className="work-experience-card relative w-full max-w-4xl mx-4 md:mx-auto my-6 p-8 md:p-10 rounded-xl bg-[#101010] border border-[#2a2a2a] hover:border-[#6849f3]/40 transition-all duration-300">
+    <article className="glass-card relative w-full max-w-4xl mx-auto my-6 p-8 md:p-10 rounded-xl hover:-translate-y-0.5 transition-transform duration-300">
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-6">
         <div>
           <h2 className="text-2xl md:text-3xl font-bold tracking-wider text-white">
@@ -19,7 +19,7 @@ const WorkExperienceCard = ({ job }) => {
             {location}
           </p>
         </div>
-        <span className="inline-block text-sm font-semibold text-gray-300 bg-[#1a1a1a] px-4 py-2 rounded-full border border-[#333] whitespace-nowrap">
+        <span className="inline-block text-sm font-semibold text-gray-300 bg-[#1a1a1a] px-4 py-2 rounded-full border border-[#6849f3]/30 whitespace-nowrap">
           {duration}
         </span>
       </div>

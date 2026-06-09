@@ -1,20 +1,27 @@
-import React from 'react'
+import React from "react";
 import { FiGithub } from "react-icons/fi";
 
-const ExperienceCard = ({experience}) => {
-
-  const {ProjectName , Duration , Description , Github } = experience;
+const ExperienceCard = ({ experience }) => {
+  const { ProjectName, Duration, Description, Github } = experience;
 
   return (
-    <div className="my-4 experience-card text-gray-300 hover:text-white hover:scale-[1.02] transition-all duration-200 cursor-pointer bg-[#101010] border border-[#2a2a2a] hover:border-[#6849f3]/40 relative m-4 p-8 md:w-[35rem] rounded-xl">
-        <h1 className="text-2xl font-bold mb-2 tracking-wider text-white">{ProjectName}</h1>
-        <h2 className="text-sm font-semibold mb-4 text-[#6849f3]">{Duration}</h2>
-        <p className="leading-7">{Description}</p>
-        <a target='_blank' rel="noreferrer" href={Github} className='absolute top-4 right-4 hover:text-[#6849f3]' aria-label="View on GitHub"><FiGithub size={30}/></a>
+    <div className="glass-card my-4 text-gray-300 hover:text-white relative m-4 p-8 md:w-[35rem] rounded-xl hover:-translate-y-1 transition-all duration-300">
+      <h3 className="text-2xl font-bold mb-2 tracking-wider text-white">
+        {ProjectName}
+      </h3>
+      <p className="text-sm font-semibold mb-4 text-[#6849f3]">{Duration}</p>
+      <p className="leading-7">{Description}</p>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={Github}
+        className="absolute top-5 right-5 p-2 rounded-lg bg-[#6849f3]/10 text-gray-400 hover:text-[#6849f3] hover:bg-[#6849f3]/20 transition-all"
+        aria-label={`View ${ProjectName} on GitHub`}
+      >
+        <FiGithub size={22} />
+      </a>
     </div>
-  )
-}
+  );
+};
 
-export default ExperienceCard
-
-
+export default ExperienceCard;

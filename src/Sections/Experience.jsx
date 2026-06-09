@@ -3,26 +3,21 @@ import WorkExperienceData from "../Data/WorkExperienceData";
 import ExperienceData from "../Data/ExperienceData";
 import WorkExperienceCard from "../Components/WorkExperienceCard";
 import ExperienceCard from "../Components/ExperienceCard";
+import SectionTitle from "../Components/SectionTitle";
 import { v4 as uuidv4 } from "uuid";
 
 const Experience = () => {
   return (
     <>
-      <h1 className="title mt-24 text-center tracking-widest font-semibold uppercase text-2xl text-white">
-        #Experience
-      </h1>
+      <SectionTitle className="mt-24">#Experience</SectionTitle>
 
-      <section id="experience" className="relative mt-8 px-6 md:px-12">
-        <h2 className="text-center text-lg md:text-xl font-semibold tracking-widest text-[#6849f3] uppercase mb-6">
-          Work Experience
-        </h2>
+      <section id="experience" className="relative px-6 md:px-12 pb-12">
+        <h2 className="subsection-title">Work Experience</h2>
         {WorkExperienceData.map((job) => (
           <WorkExperienceCard job={job} key={uuidv4()} />
         ))}
 
-        <h2 className="text-center text-lg md:text-xl font-semibold tracking-widest text-[#6849f3] uppercase mt-16 mb-6">
-          Collaborative Projects
-        </h2>
+        <h2 className="subsection-title mt-16">Collaborative Projects</h2>
         <div className="flex items-center justify-center flex-wrap">
           {ExperienceData.map((experience) => (
             <ExperienceCard experience={experience} key={uuidv4()} />

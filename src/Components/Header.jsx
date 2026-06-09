@@ -1,16 +1,25 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React from "react";
+import Navbar from "./Navbar";
 import { FaCode } from "react-icons/fa6";
 
 const Header = () => {
   return (
-    <section id='header' className='header fixed top-0 z-50 bg-black pt-4 px-4 md:px-6 w-screen flex flex-col justify-around items-start sm:flex sm:flex-row sm:justify-between sm:items-center p-2'>
-      <main className="logo mb-1">
-        <a href=""><FaCode size={30} className='cursor-pointer' /></a>
-      </main>
-      <Navbar/>
-    </section>
-  )
-}
+    <header
+      id="header"
+      className="header header-glass fixed top-0 z-50 w-full px-4 md:px-8 py-3 flex flex-row justify-between items-center"
+    >
+      <a href="#" aria-label="Back to top" className="logo group flex items-center gap-2">
+        <FaCode
+          size={28}
+          className="text-[#6849f3] group-hover:rotate-12 transition-transform duration-300"
+        />
+        <span className="hidden sm:inline text-sm font-semibold tracking-widest text-gray-400 group-hover:text-white transition-colors">
+          DP
+        </span>
+      </a>
+      <Navbar />
+    </header>
+  );
+};
 
-export default Header
+export default Header;

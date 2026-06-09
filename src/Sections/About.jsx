@@ -1,10 +1,16 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import { HiArrowDown } from "react-icons/hi";
 
 const About = () => {
   return (
-    <section className="about relative flex flex-col min-h-screen items-center justify-center py-16 p-4">
-      <h1 className="text-4xl md:text-5xl italic font-bold tracking-wider m-2">
+    <section className="about relative flex flex-col min-h-screen items-center justify-center pt-24 pb-16 px-4 overflow-hidden">
+      <div className="hero-glow hero-glow-1" aria-hidden="true" />
+      <div className="hero-glow hero-glow-2" aria-hidden="true" />
+
+      <span className="status-badge mb-6">Open to opportunities</span>
+
+      <h1 className="text-4xl md:text-6xl italic font-bold tracking-wider m-2">
         Hey!
       </h1>
       <div className="typewriter mt-3 flex items-center justify-center flex-wrap">
@@ -42,12 +48,22 @@ const About = () => {
       <p className="text-sm text-gray-500 tracking-wide">
         B.Tech in Computer Science · Parul University · Ahmedabad, India
       </p>
-      <a
-        href="#experience"
-        className="btn mt-8 tracking-widest font-semibold px-8"
-      >
-        Explore
-      </a>
+
+      <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
+        <a
+          href="#experience"
+          className="btn tracking-widest font-semibold px-8"
+        >
+          Explore
+        </a>
+        <a
+          href="#contact"
+          className="text-sm font-semibold tracking-widest uppercase text-gray-400 hover:text-[#6849f3] transition-colors flex items-center gap-2"
+        >
+          Get in touch
+          <HiArrowDown className="animate-bounce" size={16} />
+        </a>
+      </div>
     </section>
   );
 };

@@ -1,8 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { HiOutlineMail } from "react-icons/hi";
-import { FiPhone, FiMapPin } from "react-icons/fi";
+import { FiPhone, FiMapPin, FiSend, FiCheck } from "react-icons/fi";
+import SectionTitle from "../Components/SectionTitle";
 
 const CONTACT_EMAIL = "pandyadarshan811@gmail.com";
 
@@ -12,6 +13,12 @@ const TEMPLATE_ID =
   import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_iqclufp";
 const PUBLIC_KEY =
   import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "PVjiiLT5X_8QjVDY0";
+
+const SENDING_PHRASES = [
+  "Launching",
+  "In transit",
+  "Almost there",
+];
 
 const getEmailJsErrorMessage = (error) => {
   const text = error?.text || error?.message || "";
@@ -29,36 +36,44 @@ const Contact = () => {
     message: "",
   });
   const [isSending, setIsSending] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [sendingPhrase, setSendingPhrase] = useState(SENDING_PHRASES[0]);
   const [status, setStatus] = useState({ type: "", message: "" });
 
   const form = useRef();
 
+  useEffect(() => {
+    if (!isSending) return;
+    let index = 0;
+    setSendingPhrase(SENDING_PHRASES[0]);
+    const interval = setInterval(() => {
+      index = (index + 1) % SENDING_PHRASES.length;
+      setSendingPhrase(SENDING_PHRASES[index]);
+    }, 1400);
+    return () => clearInterval(interval);
+  }, [isSending]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (status.message) setStatus({ type: "", message: "" });
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
+    setIsSuccess(false);
     setStatus({ type: "", message: "" });
 
-    const options = { publicKey: PUBLIC_KEY };
-
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, options)
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, { publicKey: PUBLIC_KEY })
       .then(() => {
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-        const successMsg = "Message sent successfully!";
+        setFormData({ name: "", email: "", message: "" });
+        const successMsg = "Message sent — I'll get back to you soon!";
         setStatus({ type: "success", message: successMsg });
+        setIsSuccess(true);
         toast.success(successMsg);
+        setTimeout(() => setIsSuccess(false), 3000);
       })
       .catch((error) => {
         console.error("EmailJS failed:", error);
@@ -66,19 +81,47 @@ const Contact = () => {
         setStatus({ type: "error", message: errorMsg });
         toast.error(errorMsg);
       })
-      .finally(() => {
-        setIsSending(false);
-      });
+      .finally(() => setIsSending(false));
+  };
+
+  const renderButtonContent = () => {
+    if (isSuccess) {
+      return (
+        <>
+          <FiCheck size={18} />
+          <span>Delivered!</span>
+        </>
+      );
+    }
+    if (isSending) {
+      return (
+        <>
+          <FiSend size={16} className="plane-icon" />
+          <span>
+            {sendingPhrase}
+            <span className="sending-dots">
+              <span>.</span>
+              <span>.</span>
+              <span>.</span>
+            </span>
+          </span>
+        </>
+      );
+    }
+    return (
+      <>
+        <FiSend size={16} className="plane-icon" />
+        <span>Send Message</span>
+      </>
+    );
   };
 
   return (
     <>
-      <h1 className="title text-center mt-24 tracking-widest font-semibold uppercase text-2xl text-white">
-        #Contact
-      </h1>
+      <SectionTitle className="mt-24">#Contact</SectionTitle>
       <section
         id="contact"
-        className="contact m-6 md:m-12 md:mb-28 mt-8 mb-28 flex flex-col lg:flex-row items-center justify-center gap-12"
+        className="contact mx-6 md:mx-12 md:mb-28 mb-28 flex flex-col lg:flex-row items-center justify-center gap-12"
       >
         <div className="max-w-sm w-full">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-wider">
@@ -86,7 +129,7 @@ const Contact = () => {
           </h2>
           <p className="text-gray-400 leading-7 mb-8 tracking-wide">
             Open to new opportunities and collaborations. Reach out directly or
-            send a message through the form.
+            launch a message my way.
           </p>
           <ul className="space-y-4">
             <li>
@@ -115,7 +158,7 @@ const Contact = () => {
           </ul>
         </div>
 
-        <div className="max-w-md w-full cursor-pointer relative overflow-hidden z-10 bg-gray-800 p-8 rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-[#525CEB] before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-[#6849f3] after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12">
+        <div className="max-w-md w-full glass-card relative overflow-hidden rounded-xl p-8 shadow-lg before:w-24 before:h-24 before:absolute before:bg-[#525CEB] before:rounded-full before:-z-10 before:blur-2xl before:top-0 before:left-0 after:w-32 after:h-32 after:absolute after:bg-[#6849f3] after:rounded-full after:-z-10 after:blur-xl after:bottom-0 after:right-0">
           <h2 className="text-2xl font-bold text-white mb-6 tracking-wider">
             Send a Message
           </h2>
@@ -129,10 +172,11 @@ const Contact = () => {
                 Full Name
               </label>
               <input
-                className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
+                className="form-input"
                 type="text"
                 id="name"
                 name="name"
+                placeholder="John Doe"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -148,10 +192,11 @@ const Contact = () => {
                 Your Email
               </label>
               <input
-                className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
+                className="form-input"
                 type="email"
                 id="email"
                 name="email"
+                placeholder="you@example.com"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -167,36 +212,37 @@ const Contact = () => {
                 Message
               </label>
               <textarea
-                className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
-                rows="3"
+                className="form-input resize-none"
+                rows="4"
                 id="message"
                 name="message"
+                placeholder="Hey Darshan, I'd love to connect about..."
                 value={formData.message}
                 onChange={handleChange}
                 required
                 disabled={isSending}
-              ></textarea>
+              />
             </div>
 
             <div className="flex flex-col items-end gap-3">
               {status.message && (
                 <p
                   role="alert"
-                  className={`w-full text-sm tracking-wide rounded-md px-3 py-2 ${
+                  className={`w-full text-sm tracking-wide rounded-lg px-4 py-3 ${
                     status.type === "success"
-                      ? "bg-green-900/40 text-green-300 border border-green-700"
-                      : "bg-red-900/40 text-red-300 border border-red-700"
+                      ? "bg-green-900/30 text-green-300 border border-green-700/60"
+                      : "bg-red-900/30 text-red-300 border border-red-700/60"
                   }`}
                 >
                   {status.message}
                 </p>
               )}
               <button
-                className="bg-gradient-to-r from-[#525CEB] to-[#6849f3] tracking-widest text-white px-4 py-2 font-bold rounded-md hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed"
                 type="submit"
-                disabled={isSending}
+                disabled={isSending || isSuccess}
+                className={`send-btn ${isSending ? "is-sending" : ""} ${isSuccess ? "is-success" : ""}`}
               >
-                {isSending ? "Sending..." : "Send"}
+                {renderButtonContent()}
               </button>
             </div>
           </form>

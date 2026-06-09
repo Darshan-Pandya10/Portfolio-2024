@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <main className='app transition-all relative min-h-screen border-2 border-solid border-black'>
+    <main className="app transition-all relative min-h-screen">
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -63,7 +63,8 @@ function App() {
       {showScrollToTop && (
         <button
           onClick={scrollToTop}
-          className='fixed bottom-28 z-49 right-1 md:right-8 p-2 text-white rounded-full shadow-md border-2 border-solid border-white'
+          className="scroll-top-btn"
+          aria-label="Scroll to top"
         >
           <IoIosArrowUp size={26} />
         </button>

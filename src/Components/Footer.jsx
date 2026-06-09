@@ -4,43 +4,48 @@ import { GrLinkedinOption } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
+const socialLinks = [
+  {
+    href: "mailto:pandyadarshan811@gmail.com",
+    label: "Email",
+    icon: HiOutlineMail,
+  },
+  {
+    href: "https://www.linkedin.com/in/darshanpandya811/",
+    label: "LinkedIn",
+    icon: GrLinkedinOption,
+  },
+  {
+    href: "https://github.com/Darshan-Pandya10",
+    label: "GitHub",
+    icon: FaGithub,
+  },
+];
+
 const Footer = () => {
   return (
-    <section className="footer bg-[#222831] flex flex-col sm:flex-row items-center justify-between px-6 py-4 gap-4">
-      <main className="logo flex items-center gap-3">
-        <FaCode size={30} className="cursor-pointer" />
-        <span className="text-gray-400 text-sm tracking-wide">
-          © {new Date().getFullYear()} Darshan Pandya
+    <footer className="footer relative bg-[#0a0a0a] border-t border-[#6849f3]/20 flex flex-col sm:flex-row items-center justify-between px-6 py-5 gap-4">
+      <div className="flex items-center gap-3">
+        <FaCode size={24} className="text-[#6849f3]" />
+        <span className="text-gray-500 text-sm tracking-wide">
+          © {new Date().getFullYear()} Darshan Pandya · Built with React
         </span>
-      </main>
-      <main className="socials inline-block">
-        <a
-          href="mailto:pandyadarshan811@gmail.com"
-          className="bg-[#151515] hover:scale-110 duration-50 hover:bg-[#000000] p-3 rounded-full inline-block m-2 text-white"
-          aria-label="Email"
-        >
-          <HiOutlineMail size={28} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/darshanpandya811/"
-          target="_blank"
-          rel="noreferrer"
-          className="bg-[#151515] hover:scale-110 duration-50 hover:bg-[#000000] p-3 rounded-full inline-block m-2 text-white"
-          aria-label="LinkedIn"
-        >
-          <GrLinkedinOption size={28} />
-        </a>
-        <a
-          href="https://github.com/Darshan-Pandya10"
-          target="_blank"
-          rel="noreferrer"
-          className="bg-[#151515] hover:scale-110 duration-50 hover:bg-[#000000] p-3 rounded-full inline-block m-2 text-white"
-          aria-label="GitHub"
-        >
-          <FaGithub size={28} />
-        </a>
-      </main>
-    </section>
+      </div>
+      <div className="flex items-center gap-2">
+        {socialLinks.map(({ href, label, icon: Icon }) => (
+          <a
+            key={label}
+            href={href}
+            target={href.startsWith("mailto") ? undefined : "_blank"}
+            rel="noreferrer"
+            aria-label={label}
+            className="p-2.5 rounded-full bg-[#151515] border border-[#2a2a2a] text-gray-400 hover:text-white hover:border-[#6849f3]/50 hover:scale-110 transition-all duration-200"
+          >
+            <Icon size={22} />
+          </a>
+        ))}
+      </div>
+    </footer>
   );
 };
 
