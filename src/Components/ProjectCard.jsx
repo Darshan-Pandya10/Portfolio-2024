@@ -18,6 +18,7 @@ const ProjectCard = ({ project }) => {
       <div className="project-card__overlay">
         <div className="project-card__content">
           <h3 className="project-card__title">{title}</h3>
+          <div className="project-card__content__Btns">
           <span className="project-card__tag">{tag}</span>
           <a
             target="_blank"
@@ -28,9 +29,9 @@ const ProjectCard = ({ project }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <FiGithub size={16} />
-            View Code
             <FiArrowUpRight size={14} />
           </a>
+        </div>
         </div>
       </div>
     </article>

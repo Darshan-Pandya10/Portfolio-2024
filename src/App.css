@@ -424,7 +424,7 @@ html {
 
 .project-card {
   position: relative;
-  width: 26rem;
+  width: 20rem;
   height: 16rem;
   margin: 1rem 1.5rem;
   border-radius: 1rem;
@@ -440,7 +440,7 @@ html {
 
 @media (min-width: 768px) {
   .project-card {
-    width: 26rem;
+    width: 20rem;
     height: 16rem;
   }
 }
@@ -620,6 +620,13 @@ html {
   width: 100%;
 }
 
+.project-card__content__Btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .project-card__title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -650,7 +657,9 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  width: fit-content;
+  width: 5rem;
+  height: 2rem;
+  margin-left: 1rem;
   padding: 0.55rem 1.15rem;
   font-size: 0.75rem;
   font-weight: 700;
@@ -664,7 +673,7 @@ html {
 }
 
 .project-card__cta:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   gap: 0.75rem;
   box-shadow: 0 6px 22px rgba(104, 73, 243, 0.5);
 }
