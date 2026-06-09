@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="flex items-center gap-3">
         <FaCode size={24} className="text-[#6849f3]" />
         <span className="text-gray-500 text-sm tracking-wide">
-          © {new Date().getFullYear()} Darshan Pandya · Built with React
+          © {new Date().getFullYear()} Darshan Pandya
         </span>
       </div>
       <div className="flex items-center gap-2">
