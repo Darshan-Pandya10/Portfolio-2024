@@ -3,9 +3,8 @@ import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone, FiMapPin, FiSend, FiCheck } from "react-icons/fi";
+import ProtectedContactLink from "../Components/ProtectedContactLink";
 import SectionTitle from "../Components/SectionTitle";
-
-const CONTACT_EMAIL = "pandyadarshan811@gmail.com";
 
 const SERVICE_ID =
   import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_67gzt9o";
@@ -128,26 +127,15 @@ const Contact = () => {
             Let's Connect
           </h2>
           <p className="text-gray-400 leading-7 mb-8 tracking-wide">
-            Open to new opportunities and collaborations. Reach out directly or
-            launch a message my way.
+            Open to new opportunities and collaborations. Send a message below,
+            or reveal my direct contact details when you&apos;re ready to reach out.
           </p>
           <ul className="space-y-4">
             <li>
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="flex items-center gap-3 text-gray-300 hover:text-[#6849f3] transition-colors group"
-              >
-                <span className="p-2 rounded-lg bg-[#6849f3]/15 group-hover:bg-[#6849f3]/25 transition-colors">
-                  <HiOutlineMail size={22} className="text-[#6849f3]" />
-                </span>
-                <span className="tracking-wide break-all text-sm sm:text-base">{CONTACT_EMAIL}</span>
-              </a>
+              <ProtectedContactLink type="email" icon={HiOutlineMail} />
             </li>
-            <li className="flex items-center gap-3 text-gray-300">
-              <span className="p-2 rounded-lg bg-[#6849f3]/15">
-                <FiPhone size={20} className="text-[#6849f3]" />
-              </span>
-              <span className="tracking-wide">+91 7490924249</span>
+            <li>
+              <ProtectedContactLink type="phone" icon={FiPhone} />
             </li>
             <li className="flex items-center gap-3 text-gray-300">
               <span className="p-2 rounded-lg bg-[#6849f3]/15">
