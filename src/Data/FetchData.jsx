@@ -15,7 +15,7 @@ export const useFetchData = () => {
   const getProjects = async () => {
     try {
       const response = await client.getEntries({ content_type: 'projects' });
-      const projects = response.items.map((project) => {
+      const projects = response.items.filter((project) => project.fields.title !== "Space Tourism").map((project) => {
         const { title, url, tag, image } = project.fields;
         const img = image?.fields?.file?.url;
         return { title, url, tag, img };
