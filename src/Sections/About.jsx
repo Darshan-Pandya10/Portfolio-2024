@@ -25,25 +25,20 @@ const About = () => {
             strings: [
               " Darshan Pandya.",
               " a Frontend Developer.",
-              " a React & React Native Developer.",
             ],
             wrapperClassName:
               "text-xl md:text-2xl font-semibold text-[#6849f3]",
           }}
         />
       </div>
-      <p className="text-base md:w-[45rem] my-4 tracking-wider leading-7 text-center text-gray-300">
-        Frontend Developer at{" "}
-        <span className="text-[#6849f3] font-bold">
-          Spontaneous Enterprise
-        </span>
-        , building scalable ERP platforms, mobile apps, and production web
-        applications. Proficient in{" "}
-        <span className="text-[#6849f3] font-bold">React</span>,{" "}
-        <span className="text-[#6849f3] font-bold">Next.js</span>, and{" "}
-        <span className="text-[#6849f3] font-bold">React Native</span> — with
-        hands-on experience across the full development lifecycle, from design
-        to App Store deployment.
+      <p className="text-base md:text-lg max-w-xl md:max-w-2xl mx-auto my-5 px-2 tracking-wide leading-relaxed text-center text-gray-300">
+        I craft{" "}
+        <span className="text-white font-medium">web and mobile products</span>{" "}
+        that feel fast, polished, and effortless — with{" "}
+        <span className="text-[#6849f3] font-bold">React</span> and{" "}
+        <span className="text-[#6849f3] font-bold">React Native</span>{" "}
+        from idea to production. Based in Ahmedabad, three years in, still
+        obsessed with building things people actually enjoy using.
       </p>
       <p className="text-sm text-gray-500 tracking-wide">
         B.Tech in Computer Science · Parul University · Ahmedabad, India
