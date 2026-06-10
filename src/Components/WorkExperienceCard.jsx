@@ -11,15 +11,15 @@ const WorkExperienceCard = ({ job }) => {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wider text-white">
             {company}
           </h2>
-          <p className="text-[#6849f3] font-semibold mt-1 tracking-wide">
+          <p className="text-[#666cff] font-semibold mt-1 tracking-wide">
             {role}
           </p>
           <p className="flex items-center gap-1 text-gray-400 text-sm mt-2">
-            <MdLocationOn className="text-[#6849f3]" />
+            <MdLocationOn className="text-[#666cff]" />
             {location}
           </p>
         </div>
-        <span className="inline-block text-sm font-semibold text-gray-300 bg-[#1a1a1a] px-4 py-2 rounded-full border border-[#6849f3]/30 whitespace-nowrap">
+        <span className="inline-block text-sm font-semibold text-gray-300 bg-[#1a1a1a] px-4 py-2 rounded-full border border-[#666cff]/30 whitespace-nowrap">
           {duration}
         </span>
       </div>
@@ -33,7 +33,7 @@ const WorkExperienceCard = ({ job }) => {
             {section.points.map((point, i) => (
               <li
                 key={i}
-                className="text-gray-300 leading-7 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.65rem] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#6849f3]"
+                className="text-gray-300 leading-7 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.65rem] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#666cff]"
               >
                 {point}
               </li>
@@ -46,7 +46,7 @@ const WorkExperienceCard = ({ job }) => {
         {tech.map((item) => (
           <span
             key={item}
-            className="text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full bg-[#6849f3]/15 text-[#a78bfa] border border-[#6849f3]/30"
+            className="text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full bg-[#666cff]/15 text-[#a78bfa] border border-[#666cff]/30"
           >
             {item}
           </span>

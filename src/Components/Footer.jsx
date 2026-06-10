@@ -29,9 +29,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer relative bg-[#0a0a0a] border-t border-[#6849f3]/20 flex flex-col sm:flex-row items-center justify-between px-6 py-5 gap-4">
+    <footer className="footer relative bg-[#0a0a0a] border-t border-[#666cff]/20 flex flex-col sm:flex-row items-center justify-between px-6 py-5 gap-4">
       <div className="flex items-center gap-3">
-        <FaCode size={24} className="text-[#6849f3]" />
+        <FaCode size={24} className="text-[#666cff]" />
         <span className="text-gray-500 text-sm tracking-wide">
           © {new Date().getFullYear()} Darshan Pandya
         </span>
@@ -44,7 +44,7 @@ const Footer = () => {
               type="button"
               onClick={handleEmailClick}
               aria-label={label}
-              className="p-2.5 rounded-full bg-[#151515] border border-[#2a2a2a] text-gray-400 hover:text-white hover:border-[#6849f3]/50 hover:scale-110 transition-all duration-200"
+              className="p-2.5 rounded-full bg-[#151515] border border-[#2a2a2a] text-gray-400 hover:text-white hover:border-[#666cff]/50 hover:scale-110 transition-all duration-200"
             >
               <Icon size={22} />
             </button>
@@ -55,7 +55,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="p-2.5 rounded-full bg-[#151515] border border-[#2a2a2a] text-gray-400 hover:text-white hover:border-[#6849f3]/50 hover:scale-110 transition-all duration-200"
+              className="p-2.5 rounded-full bg-[#151515] border border-[#2a2a2a] text-gray-400 hover:text-white hover:border-[#666cff]/50 hover:scale-110 transition-all duration-200"
             >
               <Icon size={22} />
             </a>

@@ -11,7 +11,7 @@ const Header = () => {
       <a href="#" aria-label="Back to top" className="logo group flex items-center gap-2">
         <FaCode
           size={28}
-          className="text-[#6849f3] group-hover:rotate-12 transition-transform duration-300"
+          className="text-[#666cff] group-hover:rotate-12 transition-transform duration-300"
         />
         <span className="hidden sm:inline text-sm font-semibold tracking-widest text-gray-400 group-hover:text-white transition-colors">
           DP

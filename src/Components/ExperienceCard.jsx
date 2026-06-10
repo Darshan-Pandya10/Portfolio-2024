@@ -9,13 +9,13 @@ const ExperienceCard = ({ experience }) => {
       <h3 className="text-2xl font-bold mb-2 tracking-wider text-white">
         {ProjectName}
       </h3>
-      <p className="text-sm font-semibold mb-4 text-[#6849f3]">{Duration}</p>
+      <p className="text-sm font-semibold mb-4 text-[#666cff]">{Duration}</p>
       <p className="leading-7">{Description}</p>
       <a
         target="_blank"
         rel="noreferrer"
         href={Github}
-        className="absolute top-5 right-5 p-2 rounded-lg bg-[#6849f3]/10 text-gray-400 hover:text-[#6849f3] hover:bg-[#6849f3]/20 transition-all"
+        className="absolute top-5 right-5 p-2 rounded-lg bg-[#666cff]/10 text-gray-400 hover:text-[#666cff] hover:bg-[#666cff]/20 transition-all"
         aria-label={`View ${ProjectName} on GitHub`}
       >
         <FiGithub size={22} />

@@ -27,7 +27,7 @@ const About = () => {
               " a Frontend Developer.",
             ],
             wrapperClassName:
-              "text-xl md:text-2xl font-semibold text-[#6849f3]",
+              "text-xl md:text-2xl font-semibold text-[#666cff]",
           }}
         />
       </div>
@@ -35,12 +35,12 @@ const About = () => {
         I craft{" "}
         <span className="text-white font-medium">web and mobile products</span>{" "}
         that feel fast, polished, and effortless — with{" "}
-        <span className="text-[#6849f3] font-bold">React</span> and{" "}
-        <span className="text-[#6849f3] font-bold">React Native</span>{" "}
+        <span className="text-[#666cff] font-bold">React</span> and{" "}
+        <span className="text-[#666cff] font-bold">React Native</span>{" "}
         from idea to production. Based in Ahmedabad, three years in, still
         obsessed with building things people actually enjoy using.
       </p>
-      <p className="text-sm text-gray-500 tracking-wide">
+      <p className="text-sm text-gray-500 text-center tracking-wide">
         B.Tech in Computer Science · Parul University · Ahmedabad, India
       </p>
 
@@ -53,7 +53,7 @@ const About = () => {
         </a>
         <a
           href="#contact"
-          className="text-sm font-semibold tracking-widest uppercase text-gray-400 hover:text-[#6849f3] transition-colors flex items-center gap-2"
+          className="text-sm font-semibold tracking-widest uppercase text-gray-400 hover:text-[#666cff] transition-colors flex items-center gap-2"
         >
           Get in touch
           <HiArrowDown className="animate-bounce" size={16} />

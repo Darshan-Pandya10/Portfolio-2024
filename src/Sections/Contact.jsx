@@ -138,15 +138,15 @@ const Contact = () => {
               <ProtectedContactLink type="phone" icon={FiPhone} />
             </li>
             <li className="flex items-center gap-3 text-gray-300">
-              <span className="p-2 rounded-lg bg-[#6849f3]/15">
-                <FiMapPin size={20} className="text-[#6849f3]" />
+              <span className="p-2 rounded-lg bg-[#666cff]/15">
+                <FiMapPin size={20} className="text-[#666cff]" />
               </span>
               <span className="tracking-wide">Ahmedabad, India</span>
             </li>
           </ul>
         </div>
 
-        <div className="max-w-md w-full glass-card relative overflow-hidden rounded-xl p-5 sm:p-8 shadow-lg before:w-24 before:h-24 before:absolute before:bg-[#525CEB] before:rounded-full before:-z-10 before:blur-2xl before:top-0 before:left-0 after:w-32 after:h-32 after:absolute after:bg-[#6849f3] after:rounded-full after:-z-10 after:blur-xl after:bottom-0 after:right-0">
+        <div className="max-w-md w-full glass-card relative overflow-hidden rounded-xl p-5 sm:p-8 shadow-lg before:w-24 before:h-24 before:absolute before:bg-[#525CEB] before:rounded-full before:-z-10 before:blur-2xl before:top-0 before:left-0 after:w-32 after:h-32 after:absolute after:bg-[#666cff] after:rounded-full after:-z-10 after:blur-xl after:bottom-0 after:right-0">
           <h2 className="text-2xl font-bold text-white mb-6 tracking-wider">
             Send a Message
           </h2>

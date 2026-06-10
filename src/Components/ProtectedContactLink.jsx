@@ -30,10 +30,10 @@ const ProtectedContactLink = ({ type, icon: Icon }) => {
       <button
         type="button"
         onClick={handleReveal}
-        className="flex items-center gap-3 w-full text-left text-gray-300 hover:text-[#6849f3] transition-colors group"
+        className="flex items-center gap-3 w-full text-left text-gray-300 hover:text-[#666cff] transition-colors group"
       >
-        <span className="p-2 rounded-lg bg-[#6849f3]/15 group-hover:bg-[#6849f3]/25 transition-colors">
-          <Icon size={isEmail ? 22 : 20} className="text-[#6849f3]" />
+        <span className="p-2 rounded-lg bg-[#666cff]/15 group-hover:bg-[#666cff]/25 transition-colors">
+          <Icon size={isEmail ? 22 : 20} className="text-[#666cff]" />
         </span>
         <span className="tracking-wide text-sm sm:text-base">
           Show {label}
@@ -49,10 +49,10 @@ const ProtectedContactLink = ({ type, icon: Icon }) => {
     <div className="flex items-center gap-3 text-gray-300 group">
       <a
         href={href}
-        className="flex items-center gap-3 flex-1 min-w-0 text-gray-300 hover:text-[#6849f3] transition-colors"
+        className="flex items-center gap-3 flex-1 min-w-0 text-gray-300 hover:text-[#666cff] transition-colors"
       >
-        <span className="p-2 rounded-lg bg-[#6849f3]/15 group-hover:bg-[#6849f3]/25 transition-colors shrink-0">
-          <Icon size={isEmail ? 22 : 20} className="text-[#6849f3]" />
+        <span className="p-2 rounded-lg bg-[#666cff]/15 group-hover:bg-[#666cff]/25 transition-colors shrink-0">
+          <Icon size={isEmail ? 22 : 20} className="text-[#666cff]" />
         </span>
         <span className="tracking-wide break-all text-sm sm:text-base">{value}</span>
       </a>
@@ -60,7 +60,7 @@ const ProtectedContactLink = ({ type, icon: Icon }) => {
         type="button"
         onClick={handleCopy}
         aria-label={`Copy ${label}`}
-        className="shrink-0 p-2 rounded-lg border border-[#2a2a2a] text-gray-400 hover:text-white hover:border-[#6849f3]/40 transition-colors"
+        className="shrink-0 p-2 rounded-lg border border-[#2a2a2a] text-gray-400 hover:text-white hover:border-[#666cff]/40 transition-colors"
       >
         {copied ? <FiCheck size={16} className="text-green-400" /> : <FiCopy size={16} />}
       </button>
