@@ -31,14 +31,20 @@ const About = () => {
           }}
         />
       </div>
-      <p className="text-base md:text-lg max-w-xl md:max-w-2xl mx-auto my-5 px-2 tracking-wide leading-relaxed text-center text-gray-300">
-        I craft{" "}
-        <span className="text-white font-medium">web and mobile products</span>{" "}
-        that feel fast, polished, and effortless — with{" "}
-        <span className="text-[#666cff] font-bold">React</span> and{" "}
-        <span className="text-[#666cff] font-bold">React Native</span>{" "}
-        from idea to production. Based in Ahmedabad, three years in, still
-        obsessed with building things people actually enjoy using.
+      <p className="text-base md:text-lg max-w-xl md:max-w-3xl mx-auto my-5 px-2 tracking-wide leading-relaxed text-center text-gray-300">
+        I&apos;m Darshan, a{" "}
+        <span className="text-[#666cff] font-bold">React.js</span> and{" "}
+        <span className="text-[#666cff] font-bold">React Native</span> Developer
+        passionate about building digital experiences that are fast, intuitive,
+        and impactful. Over the past{" "}
+        <span className="text-white font-medium">3 years</span>, I&apos;ve
+        developed production-ready web and mobile applications while
+        continuously pushing myself to learn, grow, and explore new technologies.
+        As I expand into{" "}
+        <span className="text-[#666cff] font-semibold">full-stack development</span>,
+        I remain driven by curiosity, craftsmanship, and a love for solving
+        real-world problems. When I&apos;m not coding, I&apos;m usually watching
+        football, listening to music, or reading.
       </p>
       <p className="text-sm text-gray-500 text-center tracking-wide">
         B.Tech in Computer Science · Parul University · Ahmedabad, India

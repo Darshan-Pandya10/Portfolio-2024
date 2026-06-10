@@ -609,8 +609,8 @@ html {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #a78bfa;
-  background: rgba(104, 73, 243, 0.12);
+  color: #666cff;
+  background: rgba(88, 75, 147, 0.12);
   border: 1px solid rgba(104, 73, 243, 0.3);
 }
 
