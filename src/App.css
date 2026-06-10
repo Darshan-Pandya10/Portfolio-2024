@@ -264,7 +264,7 @@ html {
   justify-content: center;
   border-radius: 0.625rem;
   background: rgba(104, 73, 243, 0.1);
-  border: 1px solid rgba(104, 73, 243, 0.28);
+  border: 2px solid rgba(104, 73, 243, 0.28);
   cursor: pointer;
   transition:
     background 0.25s,
@@ -675,7 +675,8 @@ html {
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid rgba(42, 42, 42, 0.9);
+  padding: 4px;
+  border: 2px solid rgba(42, 42, 42, 0.9);
   background: #0d0d0d;
   transition:
     transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -798,7 +799,7 @@ html {
 }
 
 .project-card__peek-title {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: #fff;
@@ -873,7 +874,8 @@ html {
 }
 
 .project-card__title {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  font-style: italic;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #fff;
@@ -883,6 +885,7 @@ html {
 .project-card__tag {
   display: inline-flex;
   align-items: center;
+  font-style: italic;
   justify-content: center;
   width: fit-content;
   font-size: 0.72rem;
