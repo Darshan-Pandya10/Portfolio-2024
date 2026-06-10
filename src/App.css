@@ -276,7 +276,7 @@ html {
 .mobile-menu-btn.is-active {
   background: rgba(104, 73, 243, 0.18);
   border-color: rgba(104, 73, 243, 0.5);
-  box-shadow: 0 0 20px rgba(104, 73, 243, 0.2);
+  box-shadow: 0 0 20px -5px #666cff;
 }
 
 .hamburger {
