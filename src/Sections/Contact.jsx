@@ -121,7 +121,7 @@ const Contact = () => {
       <SectionTitle className="mt-24">#Contact</SectionTitle>
       <section
         id="contact"
-        className="contact mx-6 md:mx-12 md:mb-28 mb-28 flex flex-col lg:flex-row items-center justify-center gap-12"
+        className="contact mx-4 sm:mx-6 md:mx-12 md:mb-28 mb-28 flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-10 lg:gap-12 px-0 sm:px-2"
       >
         <div className="max-w-sm w-full">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-wider">
@@ -140,7 +140,7 @@ const Contact = () => {
                 <span className="p-2 rounded-lg bg-[#6849f3]/15 group-hover:bg-[#6849f3]/25 transition-colors">
                   <HiOutlineMail size={22} className="text-[#6849f3]" />
                 </span>
-                <span className="tracking-wide">{CONTACT_EMAIL}</span>
+                <span className="tracking-wide break-all text-sm sm:text-base">{CONTACT_EMAIL}</span>
               </a>
             </li>
             <li className="flex items-center gap-3 text-gray-300">
@@ -158,7 +158,7 @@ const Contact = () => {
           </ul>
         </div>
 
-        <div className="max-w-md w-full glass-card relative overflow-hidden rounded-xl p-8 shadow-lg before:w-24 before:h-24 before:absolute before:bg-[#525CEB] before:rounded-full before:-z-10 before:blur-2xl before:top-0 before:left-0 after:w-32 after:h-32 after:absolute after:bg-[#6849f3] after:rounded-full after:-z-10 after:blur-xl after:bottom-0 after:right-0">
+        <div className="max-w-md w-full glass-card relative overflow-hidden rounded-xl p-5 sm:p-8 shadow-lg before:w-24 before:h-24 before:absolute before:bg-[#525CEB] before:rounded-full before:-z-10 before:blur-2xl before:top-0 before:left-0 after:w-32 after:h-32 after:absolute after:bg-[#6849f3] after:rounded-full after:-z-10 after:blur-xl after:bottom-0 after:right-0">
           <h2 className="text-2xl font-bold text-white mb-6 tracking-wider">
             Send a Message
           </h2>

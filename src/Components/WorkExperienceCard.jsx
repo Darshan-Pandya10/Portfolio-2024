@@ -5,10 +5,10 @@ const WorkExperienceCard = ({ job }) => {
   const { company, role, location, duration, highlights, tech } = job;
 
   return (
-    <article className="glass-card relative w-full max-w-4xl mx-auto my-6 p-8 md:p-10 rounded-xl hover:-translate-y-0.5 transition-transform duration-300">
+    <article className="glass-card relative w-full max-w-4xl mx-auto my-4 sm:my-6 p-5 sm:p-8 md:p-10 rounded-xl hover:-translate-y-0.5 transition-transform duration-300">
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-6">
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-wider text-white">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wider text-white">
             {company}
           </h2>
           <p className="text-[#6849f3] font-semibold mt-1 tracking-wide">

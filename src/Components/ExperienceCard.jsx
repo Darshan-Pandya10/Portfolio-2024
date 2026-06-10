@@ -5,7 +5,7 @@ const ExperienceCard = ({ experience }) => {
   const { ProjectName, Duration, Description, Github } = experience;
 
   return (
-    <div className="glass-card my-4 text-gray-300 hover:text-white relative m-4 p-8 md:w-[35rem] rounded-xl hover:-translate-y-1 transition-all duration-300">
+    <div className="glass-card my-4 text-gray-300 hover:text-white relative w-full max-w-[35rem] mx-auto p-6 sm:p-8 rounded-xl hover:-translate-y-1 transition-all duration-300">
       <h3 className="text-2xl font-bold mb-2 tracking-wider text-white">
         {ProjectName}
       </h3>

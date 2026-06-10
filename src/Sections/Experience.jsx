@@ -11,7 +11,7 @@ const Experience = () => {
     <>
       <SectionTitle className="mt-24">#Experience</SectionTitle>
 
-      <section id="experience" className="relative px-6 md:px-12 pb-12">
+      <section id="experience" className="relative px-4 sm:px-6 md:px-12 pb-12">
         <h2 className="subsection-title">Work Experience</h2>
         {WorkExperienceData.map((job) => (
           <WorkExperienceCard job={job} key={uuidv4()} />

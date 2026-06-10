@@ -20,7 +20,7 @@ const Projects = () => {
       <SectionTitle className="mt-24">#Projects</SectionTitle>
       <section
         id="projects"
-        className="projects grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 p-4 md:p-12 pb-24 max-w-[70rem] mx-auto"
+        className="projects grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 px-4 sm:px-6 md:p-12 pb-24 max-w-[70rem] mx-auto w-full"
       >
         {projects.map((project) => (
           <ProjectCard project={project} key={uuidv4()} />
