@@ -8,14 +8,15 @@ const WorkExperienceData = [
       {
         title: "ERP Platform (Web / Mobile)",
         points: [
-          "Developed and maintained ERP system modules using React.js and Next.js, contributing to scalable and maintainable front-end architecture.",
-          "Built a React Native mobile application for the ERP platform, enabling mobile access to core business workflows.",
-          "Successfully published the React Native app on Android and iOS, managing deployment and ongoing maintenance for stable releases.",
-          "Designed and developed a custom, interactive UI/UX from scratch, focusing on usability and performance.",
-          "Collaborated with backend, QA, and product teams to deliver new features with smooth API integration.",
-          "Conducted code reviews and mentored interns on React fundamentals and code quality.",
-          "Organized internal knowledge-sharing sessions on React.js to support team learning and best practices.",
-          "Implemented reusable UI components and optimized front-end performance across the application.",
+          "Built and maintained ERP modules using React.js and Next.js, contributing to a scalable and maintainable front-end architecture.",
+          "Built a React Native mobile app for the ERP platform, giving users mobile access to core business workflows.",
+          "Published the app on both Android and iOS, owning the deployment process, release cycles, and ongoing maintenance for stable updates.",
+          "Designed a custom, interactive UI/UX from scratch that balances usability and performance while staying consistent with the ERP’s design standards.",
+          "Improved UX across Dashboard, List, and Form pages with cleaner layouts, smarter filters, and clearer validation, reducing average task completion time by 30%.",
+          "Built reusable components with Material UI, Tailwind CSS, and React Hooks, cutting duplicated UI code by 40% and speeding up new page development by 25%.",
+          "Partnered with backend, QA, and product teams to deliver new features with smooth API integration and consistent data flow.",
+          "Mentored interns on React fundamentals and led code reviews to raise overall code quality.",
+          "Hosted internal knowledge-sharing sessions on React.js to promote best practices across the team."
         ],
       },
       {
